@@ -43,7 +43,7 @@ let d = a + b * c ;
 var e = "Halo ";
 const f = "Nama ";
 let g = "Saya ";
-let h = "Bambang ";
+let h = "raihan ";
 
 let result = e + f + g + h;
 
@@ -183,4 +183,4 @@ function checkUmur(){
     }
 }
 
-console.log(70 > 90 && 23 < 90 && !true || 87 > 67 && 54 < 90 && !true); // 
+console.log(70 > 90 && 23 < 90 && !true || 87 > 67 && 54 < 90 && !true); 
