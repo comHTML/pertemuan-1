@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studi Kasus</title>
+    <style>
+        
+        .rip {
+            background-color: aqua;
+            color: black;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="rip">
+        <button onclick="nilai()">Cek Nilai</button>
+    </div>
+    
+</body>
+    <script>
+        function nilai() {
+            let nilai = prompt ("nilai")
+            if (nilai >= 90) {
+                alert ("Rank = A Nilai = Istimewa")
+            } else if (nilai >= 80){
+                alert ("Rank = B Nilai =  Bagus")
+            } else if (nilai >= 70){
+                alert ("Rank = C Nilai = Bagus")
+            } else if (nilai >= 60){
+                alert ("Rank = D Nilai = Lumayan")
+            } else {
+                alert ("Rank = E Nilai = Remedial")
+            }
+
+
+        }
+    </script>
+</html>

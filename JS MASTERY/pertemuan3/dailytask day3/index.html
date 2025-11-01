@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Mandiri</title>
+
+    <style>
+    body {
+      justify-content: center;
+      
+    }
+    .klik {
+      border-radius: 30px;
+      text-align: center;
+    }
+    
+    button:focus { outline: 10px solid rgba(0,120,255,0.25); }
+    </style>
+
+</head>
+
+<body>
+    <div class="klik">
+    <p></p>
+    <button onclick="cekumur()">Tulis Umur</button>
+    <button onclick="pilihday()">Pilih Hari</button>
+    
+        
+  </div>
+    
+</body>
+    <script>
+        function cekumur() {
+          let usia =prompt ("Tuliskan umur anda")
+          
+            if ( usia <= 11) {
+                alert ("Kamu masih anak-anak")
+            } else if (usia > 11 ) {
+                alert ("Kamu sudah Remaja");
+            } else {
+                alert ("Umur belom cukup");
+            }
+            
+        }
+
+
+        function pilihday() {
+            let hari = prompt("Pilih hari: \n 1.Senin \n 2.Selasa \n 3.Rabu \n 4.Kamis \n 5.Jum'at \n 6.Sabtu \n 7.Minggu")
+            switch (hari) {
+                    case("1"):
+                    alert("")
+                 console.log();
+                break;
+                    case("2"):
+                    alert("")
+                    console.log();
+                break;
+                    case("3"):
+                    alert("")
+                    console.log();
+                break;
+                    case("4"):
+                    alert("")
+                    console.log();
+                break;
+                    case("5"):
+                    alert("")
+                    console.log();
+                break;
+                    case("6"):
+                    alert("")
+                    console.log();
+                break;
+                    case("7"):
+                    alert("")
+                    console.log();
+                break;
+
+            }
+
+        }
+
+        function nilai () {
+            
+        }
+       
+     for (let i = 1; i <= 10; i++) {
+        console.log(i); 
+    }
+
+
+
+    </script>
+</html>
