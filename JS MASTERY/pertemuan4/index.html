@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live Coding JS – Edu Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header>
+        <h1>JavaScript Mastery By Rumah IT</h1>
+        <p>PAKSA - TERBIASA - BISA - LUARBIASA </p>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="container">
+        
+        <!-- === BUTTONS AREA === -->
+        <section class="box" id="buttons-section">
+            <h2>Function Trigger Buttons</h2>
+            <button class="icon-btn icon" onclick="clearOutput()" title="Clear Output">🗑️</button>
+            <button class="icon-btn icon" onclick="addNewPharaghraph()" title="Add New Line">➕</button>
+            <!-- Tambahkan tombol lainnya sesuai materi -->
+            <br><br>
+
+            <div>
+                <button class="icon-btn" onclick="togglePopup('1')">F1</button>
+                <button class="icon-btn" onclick="togglePopup('2')">F2</button>
+                <button class="icon-btn" onclick="togglePopup('3')">F3</button>
+                <button class="icon-btn" onclick="togglePopup('4')">F4</button>
+                <!-- Tambahkan tombol lainnya sesuai materi -->
+            </div>
+        </section>
+
+        <!-- === OUTPUT AREA === -->
+        <section class="box" id="output-section">
+            <h2>Output / Result</h2>
+            <div id="outputBox"></div>
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>Made for Programming Classs Batch 23  | EL Course &copy; 2025</p>
+    </footer>
+
+
+
+    <!-- ===== MODAL / NOTIFICATION POPUP ===== -->
+    
+  <!-- >>>>FORM F1<<<< -->
+
+  <div id="popupModal1" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-btn" onclick="togglePopup('1')">&times;</span>
+      <section id="form-section">
+        <h2>F1: Kalkulator Dua Angka</h2>
+        <form id="F1">
+          <label>Angka Pertama:</label>
+          <input type="number" id="firstNumber" required />
+
+          <label>Angka Kedua:</label>
+          <input type="number" id="secondNumber" required />
+
+          <label>Operator (*, +, /):</label>
+          <input type="text" id="operator" required />
+
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </div>
+  </div>
+
+  <!-- >>>>FORM F2<<<< -->
+
+  <div id="popupModal2" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-btn" onclick="togglePopup('2')">&times;</span>
+      <section id="form-section">
+        <h2>F2: Data Diri</h2>
+        <form id="F2">
+          <label>Nama:</label>
+          <input type="text" id="nama" required />
+
+          <label>Alamat:</label>
+          <input type="text" id="alamat" required />
+
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </div>
+  </div>
+
+  <!-- >>>>FORM F3<<<< -->
+
+  <div id="popupModal3" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-btn" onclick="togglePopup('3')">&times;</span>
+      <section id="form-section">
+        <h2>F3: Penjumlahan Tiga Angka</h2>
+        <form id="F3">
+          <label>Angka 1:</label>
+          <input type="number" id="num1" required />
+
+          <label>Angka 2:</label>
+          <input type="number" id="num2" required />
+
+          <label>Angka 3:</label>
+          <input type="number" id="num3" required />
+
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </div>
+  </div>
+
+  <!-- >>>>FORM F4<<<< -->
+   
+  <div id="popupModal4" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-btn" onclick="togglePopup('4')">&times;</span>
+      <section id="form-section">
+        <h2>F4: Pilih Hero</h2>
+        <form id="F4">
+          <label for="Nick">Username:</label>
+          <input type="text" id="Nick" required />
+
+          <label for="Role">Hero: <br>1. Fighter <br>2. EX-Machine <br>3. Mutan</label>
+          <input type="text" id="Role" placeholder="Masukkan nomor role" required />
+
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </div>
+  </div>
+
+    <!-- ===== JAVASCRIPT ===== -->
+
+    <script src="script.js"></script>
+</body>
+
+</html>
