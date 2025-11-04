@@ -270,13 +270,13 @@ function F4(nick, role) {
   let result;
   switch (role) {
     case "1":
-      result = "Fighter (Superman)";
+      result = "Fighter (Anda Menggunakan Superman)";
       break;
     case "2":
-      result = "EX-Machine (Iron-Man)";
+      result = "EX-Machine (Anda Menggunakan Iron-Man)";
       break;
     case "3":
-      result = "Mutan (Wolverine)";
+      result = "Mutan (Anda Menggunakan Wolfverine)";
       break;
     default:
       alert("Role tidak sesuai! Pilih 1, 2, atau 3.");
@@ -348,3 +348,33 @@ tes();
 abcx();
 asd();
 bala();
+
+
+document.getElementById("F2").addEventListener("submit", function (e) {
+    e.preventDefault();
+    togglePopup("2")
+    const nama = document.getElementById("nama").value;
+
+    if (!nama) {
+        alert("Silahkan masukan nama");
+        togglePopup("2")
+    } else {
+        salamCheckReligi(nama)
+        togglePopup("2")
+
+    }
+
+});
+
+let tagOutput = document.getElementById('outputBox');
+
+function salamCheckReligi(nama) {
+    togglePopup("2")
+    if(nama.includes("muhammad")){
+        tagOutput.innerText += `Hello ${nama} Assalamualaikum Brother`;
+        return `Hello ${nama} Assalamualaikum Brtoher`
+    } else {
+        tagOutput.innerText += `Hello ${nama} Ada yang bisa di bantu \n`;
+        return `Hello ${nama} Brtoher`
+    }
+} //includes ap yg masuk 
