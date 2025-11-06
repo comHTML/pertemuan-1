@@ -377,4 +377,20 @@ function salamCheckReligi(nama) {
         tagOutput.innerText += `Hello ${nama} Ada yang bisa di bantu \n`;
         return `Hello ${nama} Brtoher`
     }
-} //includes ap yg masuk 
+} 
+// includes ap yg masuk 
+// return mengeluaarkan data di dalam block scope ke global scope
+// parameter ngambil data ekternal ke internal
+// 
+function dfg() {
+    var lop = 100
+    var lop ="lop 2"
+    if (true){
+      var lop = true
+      var lop = "lop 4"
+    }
+    return lop //mengeluarkan data dari dalam ke luar
+}
+console.log(dfg()); //mengambil data lewat jalur return
+
+
