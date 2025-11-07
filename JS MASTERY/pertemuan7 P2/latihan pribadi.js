@@ -87,6 +87,41 @@ console.log(arr123);
 
 let arr112 = [1, 2, 3, 4, 5, 6, 7, 8, 9,]
 
+// ================================================
+// ================================================
+
+//CONTOH SPLICE
+
+// start (index): tempat mulai operasi. Jika negatif, dihitung dari akhir (arr.length + start).
+
+// deleteCount: jumlah elemen yang dihapus mulai dari start. Jika 0, tidak ada yang dihapus (jadi hanya sisip).
+
+// ...items: elemen baru yang akan disisipkan pada posisi start.
+
+let arr1212 = ["a","b","c","d"];
+const removedItems = arr1212.splice(1, 2);  // mulai index 1, hapus 2 item ("b","c")
+console.log("Setelah splice hapus:", arr1212);      // ["a","d"]
+console.log("Yang terhapus:", removedItems);     // ["b","c"]
+// contoh hapus (yg di atas)
+
+
+
+let arr7 = [1,2,5];
+arr7.splice(2, 0, 3, 4);   // mulai di index 2, hapus 0, sisip 3 dan 4
+console.log(arr7);        // [1,2,3,4,5]
+// sisip tanpa hapus (insert): (yg di atas)
+
+
+
+let arr8 = ["sun","mon","tue"];
+arr8.splice(1, 1, "MONDAY", "TUESDAY"); // mulai index1, hapus 1 ("mon"), sisip 2 item
+console.log(arr8); // ["sun", "MONDAY", "TUESDAY", "tue"]
+// ganti (replace): (yg di ataas)
+
+let arr9 = ['a','b','c','d'];
+arr9.splice(-2, 1, 'X'); // -2 -> index arr.length-2 (posisi 'c'), hapus 1, sisip 'X'
+console.log(arr9); // ['a','b','X','d']
+// menggunakan indeks negatif: (yg di atas)
 
 
 
