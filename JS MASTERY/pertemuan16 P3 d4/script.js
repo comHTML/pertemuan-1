@@ -44,11 +44,31 @@ janji3.then(function(data){
 })
 
 
+function login(username) {
+     return new Promise (function(resolve, reject) {
+        setTimeout(() => {
+            if (username === userbenar) {
+                resolve (`loginm berhasil : ${username}`);
+            } else {
+                reject ("gagal");
+            }
+        }, 2000); 
+    });
+}
+
+const userbenar = "admin"; 
+login ("admin")
+.then(function(data2){
+    console.log("ini berjalan dan benar ",data2);
+    
+})
+  .catch(function(false2){
+    console.log("ini tdk berjalan dan salah ",false2);
+    
+  });
 
 
-
-
-
+// -----  -----   
 
 
 
