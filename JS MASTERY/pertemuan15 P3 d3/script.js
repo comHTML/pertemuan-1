@@ -70,15 +70,20 @@ simpanData({ nama: "Abyan", asal : "bali" }, (obj) => {
 // return menghentikan fungsi → callback tidak dijalankan
 
 function simpanD(data, callback) {
-    if (!data){
-        console.log("data blm diisi");
-        return;
-    }
-    callback(data)
+  if (!data){
+      console.log("data blm diisi");
+      return;
+  }
+  callback(data);
 }
-simpanD({ nama : "jak", asal : "bali", alamat : "jakarta" }, (obj) => {
-    console.log(" disimpsn ", obj);
-} )
+
+simpanD(
+  { nama : "jak", asal : "bali", alamat : "jakarta" },
+  function(obj) {
+      console.log("disimpan", obj);
+  }
+);
+
 
 
 
@@ -96,3 +101,36 @@ function awal(arr2, callback) {
   console.log("Hasil : ", lihat);
   
 }
+awal ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], (arr2) => arr2.map(x => x * 2 ));
+
+
+
+// setTimeout
+console.log("Mulai");
+
+setTimeout(() => {
+  console.log("Ini jalan setelah 3 detik");
+},3000);
+// akan berjalan apabila telah selesai perintahnya
+console.log("Selesai");
+
+
+// Fetch Data (Callback di fungsi kita sendiri)
+function ambilUser(callback) {
+  setTimeout(() => {
+    callback({ id: 1, nama: "Zahran" });
+  }, 1000);
+}
+
+ambilUser((user) => console.log("User diterima:", user));
+
+// Callback Hell (Wajib Tahu)
+setTimeout(() => {
+  console.log("1");
+  setTimeout(() => {
+    console.log("2");
+    setTimeout(() => {
+      console.log("3");
+    }, 1000);
+  }, 1000);
+}, 1000);
