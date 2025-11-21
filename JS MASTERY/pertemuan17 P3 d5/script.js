@@ -1,39 +1,5 @@
-function login(){
-    return new Promise(function(resolve){
-        setTimeout(() =>{
-        resolve({user:"matsa",pw:"1234"})
-    },2000)
-})
-}
-function data (){
-    return new Promise((resolve) =>{
-        setTimeout(()=>{
-        resolve({nama:"Rayhan",tinggal:"Kalimantan"})
-    },2000)
-})
-}
-async function mengambil() {
-    const datalogin = await login()
-    const datauser = await data()
-    const hasil = [datalogin,datauser]
-    return hasil
-}
-// mengambil()
-// .then((result) =>{
-//     console.log(result);
-    
-// })
 
-login()
-.then((a)=>{
-    return data().then((b)=>{
-        return {a,b}
-    })
-})
-.then((result)=>{
-    console.log(result);
-  
-})
+
 
 function getUser(...datas){
     return new Promise((suc,er)=>{
