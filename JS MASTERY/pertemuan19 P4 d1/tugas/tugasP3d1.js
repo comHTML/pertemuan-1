@@ -102,10 +102,10 @@ ul.appendChild(li);
 // li.remove();
 
 
-// Event Listener
-const btn = document.getElementById("btn");
+// Event Listener intinya : Saat tombol ditekan → jalankan fungsi ini.
+const btn3 = document.getElementById("btn");
 
-btn.addEventListener("click", function () {
+btn3.addEventListener("click", function () {
   console.log("Tombol diklik");
 });
 
@@ -113,23 +113,27 @@ const input = document.getElementById("name");
 input.addEventListener("keyup", function (event) {
   console.log("Ketik:", event.target.value);
 });
+console.log("Ketik:", event.target.value);
+
 
 
 // Ganti Judul Halaman
-{/* <h1 id="page-title">Belajar JavaScript</h1>
-<button id="btn-change">Ganti Judul</button> */}
-
-{/* <script>
-  const title = document.getElementById("page-title");
-  const btn = document.getElementById("btn-change"); */}
-
-  {/* btn.addEventListener("click", () => {
-    title.innerText = "Selamat Datang di Kelas DOM!";
-  });
-</script> */}
-
+// soal 2.1
 const judul = document.getElementById("page-title");
 const tombol = document.getElementById("btn-change");
 tombol.addEventListener("click", () => {
     judul.innerText = "Selamat Datang di Kelas DOM!";
 }); 
+
+
+// Live Preview Teks
+const inputD = document.getElementById("name-input");
+  const preview = document.getElementById("name-preview");
+
+  input.addEventListener("keyup", () => {
+    const v = input.value.trim();
+    preview.textContent = v === "" ? "(belum ada)" : v;
+  });
+
+
+  // 
